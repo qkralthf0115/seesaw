@@ -53,22 +53,18 @@ export default function HomePage() {
             fontSize="12px"
             fontWeight="400"
           ></Text>
-          <Link to="/SignIn">
-            <Button
-              text="Sign in"
-              onClick={onclick}
-              color="black"
-              background="white"
-            ></Button>
-          </Link>
-          <Link to="/SignUp">
-            <Button
-              text="Sign up"
-              onClick={onclick}
-              color="white"
-              background="black"
-            ></Button>
-          </Link>
+          <Button
+            text="Sign in"
+            onClick={onclick}
+            color="black"
+            background="white"
+          ></Button>
+          <Button
+            text="Sign up"
+            onClick={onclick}
+            color="white"
+            background="black"
+          ></Button>
         </ButtonWrapCenter>
       </ButtonWrap>
     </Wrap>

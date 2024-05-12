@@ -2,7 +2,6 @@ import "react-calendar/dist/Calendar.css"; // css import
 
 import { useState } from "react";
 import Calendar from "react-calendar";
-import LinearGradient from "react-native-linear-gradient";
 import styled from "styled-components";
 
 import logo from "../assets/Montly Moomap Log.png";
