@@ -23,7 +23,7 @@ const AppWrap = styled.div`
 function App() {
   return (
     <AppWrap>
-      <RecordPage></RecordPage>
+      <CalenderPage />
     </AppWrap>
   );
 }
