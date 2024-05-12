@@ -1,20 +1,17 @@
-import Button from "src/componant/button";
-import Logo from "src/componant/logo";
-import Text from "src/componant/text";
+import Button from "src/component/button";
+import Logo from "src/component/logo";
+import Text from "src/component/text";
 import styled from "styled-components";
 
-import chevronLeft from "../assets/chevron-left.svg";
-import MooMap from "../assets/MooMap.png";
+import BackButton from "../component/backButton";
 function onclick() {
   console.log("click");
 }
 const Wrap = styled.div`
   display: flex;
   width: 80%;
-  height: 100vh;
   gap: 10px;
-  margin-top: 30px;
-  background-color: #f5f5f5;
+  padding: 30px;
   flex-direction: column;
   align-items: start;
 `;
@@ -40,20 +37,12 @@ const Input = styled.input`
   color: #686f80;
 `;
 
-const BackButton = styled.a`
-  background-image: url(${chevronLeft});
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-`;
-
 export default function SignInPage() {
   return (
     <Wrap>
       <BackButton></BackButton>
       <WrapCenter>
-        <Logo src={MooMap}></Logo>{" "}
+        <Logo></Logo>
         <Text
           text="Sign In"
           color="black"
@@ -70,13 +59,13 @@ export default function SignInPage() {
         fontSize="14px"
       ></Text>
       <Input></Input>
-      <Text
-        text="Forgot Password?"
-        color="#686f80"
-        fontWeight="400"
-        fontSize="14px"
-      ></Text>
       <WrapCenter>
+        <Text
+          text="Forgot Password?"
+          color="#686f80"
+          fontWeight="400"
+          fontSize="14px"
+        ></Text>
         <Button
           text="NEXT"
           onClick={onclick}

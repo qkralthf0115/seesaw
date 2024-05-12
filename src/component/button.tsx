@@ -5,7 +5,7 @@ import { IButton } from "../interfaces/interfaces";
 const StyledButton = styled.button<{ color: string; background: string }>`
   color: ${(props) => props.color || "gray"};
   background: ${(props) => props.background || "white"};
-  font-size: 18px;
+  font-size: 16px;
   padding: 0.5em 5em;
   border: 2px solid ${(props) => props.background || "white"};
   border-radius: 45px;

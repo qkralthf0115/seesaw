@@ -1,10 +1,9 @@
-import Button from "src/componant/button";
-import Logo from "src/componant/logo";
-import Text from "src/componant/text";
+import Button from "src/component/button";
+import Logo from "src/component/logo";
+import Text from "src/component/text";
 import styled from "styled-components";
 
 import chevronLeft from "../assets/chevron-left.svg";
-import MooMap from "../assets/MooMap.png";
 function onclick() {
   console.log("click");
 }
@@ -53,7 +52,7 @@ export default function SignInPage() {
     <Wrap>
       <BackButton></BackButton>
       <WrapCenter>
-        <Logo src={MooMap}></Logo>{" "}
+        <Logo></Logo>
         <Text
           text="Sign In"
           color="black"

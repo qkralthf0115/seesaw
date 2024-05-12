@@ -1,8 +1,8 @@
-import Button from "src/componant/button";
-import Text from "src/componant/text";
+import Button from "src/component/button";
+import Text from "src/component/text";
 import styled from "styled-components";
 
-import homeImage from "../assets/home.png";
+import homeImage from "../assets/first.png";
 const Wrap = styled.div`
   width: 100%;
   height: 100vh;
