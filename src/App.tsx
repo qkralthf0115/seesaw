@@ -4,6 +4,7 @@ import "./App.css";
 // import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
+import CalenderPage from "./pages/CalendarPage";
 import LoginPage from "./pages/LoginPage";
 import MapPage from "./pages/MapPage";
 import MyInfoPage from "./pages/MyInfoPage";

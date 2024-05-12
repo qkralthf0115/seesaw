@@ -10,9 +10,10 @@ const SearchBox = styled.div`
   align-items: center;
   position: fixed;
   justify-content: space-between;
+  gap: 15px;
   z-index: 1000;
   top: 20px;
-  width: 338px;
+  width: 70%;
   height: 47px;
   padding-left: 40px;
   background-image: url(${searchBar});

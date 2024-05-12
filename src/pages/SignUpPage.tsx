@@ -54,7 +54,7 @@ export default function SignInPage() {
       <WrapCenter>
         <Logo></Logo>
         <Text
-          text="Sign In"
+          text="Sign Up"
           color="black"
           fontWeight="500"
           fontSize="16px"
@@ -71,7 +71,7 @@ export default function SignInPage() {
       <Input></Input>
       <Text
         text="Forgot Password?"
-        color="#686f80"
+        color="white"
         fontWeight="400"
         fontSize="14px"
       ></Text>

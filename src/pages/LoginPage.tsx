@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "src/component/button";
 import Text from "src/component/text";
 import styled from "styled-components";
@@ -29,7 +30,6 @@ const ButtonWrapCenter = styled.div`
 function onclick() {
   console.log("click");
 }
-
 export default function HomePage() {
   return (
     <Wrap>
@@ -53,18 +53,22 @@ export default function HomePage() {
             fontSize="12px"
             fontWeight="400"
           ></Text>
-          <Button
-            text="Sign in"
-            onClick={onclick}
-            color="black"
-            background="white"
-          ></Button>
-          <Button
-            text="Sign up"
-            onClick={onclick}
-            color="white"
-            background="black"
-          ></Button>
+          <Link to="/SignIn">
+            <Button
+              text="Sign in"
+              onClick={onclick}
+              color="black"
+              background="white"
+            ></Button>
+          </Link>
+          <Link to="/SignUp">
+            <Button
+              text="Sign up"
+              onClick={onclick}
+              color="white"
+              background="black"
+            ></Button>
+          </Link>
         </ButtonWrapCenter>
       </ButtonWrap>
     </Wrap>

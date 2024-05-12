@@ -4,9 +4,7 @@ interface tagButtonType {
   handle: () => void;
   icon: string;
 }
-function handle() {
-  console.log("handle");
-}
+
 const Button = styled.div`
   display: flex;
   justify-content: center;
@@ -15,6 +13,9 @@ const Button = styled.div`
   padding: 7px 10px;
   gap: 5px;
   box-shadow: 0px 0px 4px #959595;
+  &:hover {
+    background-color: pink;
+  }
 `;
 const Icon = styled.div<{ src: string }>`
   width: 20px;
@@ -26,7 +27,7 @@ const Icon = styled.div<{ src: string }>`
 
 export default function TagButton({ text, handle, icon }: tagButtonType) {
   return (
-    <Button handle={handle}>
+    <Button onClick={handle}>
       <Icon src={icon}></Icon>
       <div>{text}</div>
     </Button>

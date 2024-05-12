@@ -10,6 +10,7 @@ function onclick() {
 const Wrap = styled.div`
   display: flex;
   width: 80%;
+  margin-top: 50px;
   gap: 10px;
   padding: 30px;
   flex-direction: column;
@@ -19,7 +20,7 @@ const Wrap = styled.div`
 const WrapCenter = styled.div`
   display: flex;
   width: 100%;
-  gap: 10px;
+  gap: 20px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,7 @@ const Input = styled.input`
 export default function SignInPage() {
   return (
     <Wrap>
-      <BackButton></BackButton>
+      {/* <BackButton></BackButton> */}
       <WrapCenter>
         <Logo></Logo>
         <Text

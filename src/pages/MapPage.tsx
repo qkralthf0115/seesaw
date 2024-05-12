@@ -1,22 +1,22 @@
 // import { useState } from "react";
 // import { on } from "events";
-import { Map } from "react-kakao-maps-sdk";
+
 import BarButton from "src/component/barButton";
 import styled from "styled-components";
 
 import bench from "../assets/bench.png";
-import calander from "../assets/calander.png";
+import calendar from "../assets/calendar.png";
 import heart from "../assets/heart.png";
 import people from "../assets/people.png";
 import person from "../assets/person.png";
 import profile from "../assets/profile.png";
 import quiet from "../assets/quiet.png";
 import tree from "../assets/tree.png";
+import Map from "../component/map";
 // import Pin from "../componant/pin";
 import { SearchBar } from "../component/searchBar";
 import TagButton from "../component/tagButton";
 // import { SearchResultsList } from "../componant/SearchResultList";
-import useKakaoLoader from "./useKakaoLoader";
 function handle() {
   console.log("click");
 }
@@ -42,36 +42,54 @@ const TagWrapper = styled.div`
 `;
 const SearchWrapper = styled.div`
   display: flex;
-  width: 100%;
-  gap: 10px;
+  width: 90%;
+  gap: 20px;
   justify-content: space-between;
   align-items: center;
-  & div {
-    position: fixed;
-    z-index: 1500;
-    bottom: 10px;
-  }
 `;
 const ProfileButton = styled.div`
   background-image: url(${profile});
-  width: 47px;
-  height: 47px;
+  background-size: cover;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
   display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+  z-index: 1000;
 `;
-const CalanderButton = styled.div`
-  background-image: url(${calander});
-  width: 47px;
-  height: 47px;
+const CalendarButton = styled.div`
+  background-image: url(${calendar});
+  background-size: cover;
+  width: 50px;
+  height: 50px;
   padding: 0;
   margin: 0;
+  cursor: pointer;
+`;
+const CalendarButtonWrapper = styled.div`
+  display: flex;
+  position: fixed;
+  bottom: 20%;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  left: 5%;
+`;
+const BarWrapper = styled.div`
+  display: flex;
+  position: fixed;
+  bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
 `;
 
 export default function MapPage() {
   // const [results, setResults] = useState([]);
-  useKakaoLoader();
   return (
     <Wrap>
       <SearchWrapper>
@@ -85,29 +103,14 @@ export default function MapPage() {
         <TagButton text="나홀로" handle={handle} icon={person}></TagButton>
         <TagButton text="조용한" handle={handle} icon={quiet}></TagButton>
         <TagButton text="인기" handle={handle} icon={heart}></TagButton>
-        <SearchWrapper>
-          <div>
-            <CalanderButton></CalanderButton>
-            <BarButton text="Social MooMap 보기"></BarButton>
-          </div>
-        </SearchWrapper>
+        <CalendarButtonWrapper>
+          <CalendarButton></CalendarButton>
+        </CalendarButtonWrapper>
+        <BarWrapper>
+          <BarButton text="Social MooMap 보기"></BarButton>
+        </BarWrapper>
       </TagWrapper>
-      {/* <SearchBar setResults={setResults} />
-      {results && results.length > 0 && <SearchResultsList results={results} />} */}
-      <Map // 지도를 표시할 Container
-        id="map"
-        center={{
-          // 지도의 중심좌표
-          lat: 35.22756912448965,
-          lng: 126.84162915595074,
-        }}
-        style={{
-          // 지도의 크기
-          width: "100%",
-          height: "100vh",
-        }}
-        level={3} // 지도의 확대 레벨
-      ></Map>
+      <Map></Map>
     </Wrap>
   );
 }
